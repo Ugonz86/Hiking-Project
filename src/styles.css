@@ -51,8 +51,6 @@ input[type="date"]::-webkit-inner-spin-button {
     display: none;
 }
 
-
-
 img:hover {
   transform: scale(1.2);
 }
@@ -130,14 +128,15 @@ button#searchNearby:hover, button#searchDestination:hover, button#find-trails:ho
 }
 
 
+
 /* ---------------------- Modified ------------------*/
+
 
 /* This centers all buttons again */
 
 #intro, #searchBar, #searchByPlace {
   text-align: center;
 }
-
 
 
 /* Changes fonts and spacing in results in that are displayed */
@@ -147,7 +146,6 @@ button#searchNearby:hover, button#searchDestination:hover, button#find-trails:ho
   line-height: 15px;
   font-family: sans-serif;
 }
-
 
 
 /* Moves get directions link to the right, updates colors, appears button */
@@ -184,7 +182,6 @@ a {
 
 /* Fixes images to align properly */
 
-
 img {
   border-radius: 5px;
   float: left;
@@ -203,7 +200,6 @@ h4#trail-name {
   margin-top: 0;
   margin-bottom: 25px;
 }
-
 
 
 /* Home Button */
@@ -234,6 +230,8 @@ h4#trail-name {
   border: 0;
 }
 
+
+/* ------- Responsive Design below --------- */
 
 
 @media screen and (max-width: 2250px){
