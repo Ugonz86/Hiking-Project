@@ -64,13 +64,7 @@ $(document).ready(function() {
         $("#display-div").show();
       });
   });
-  $("#goHome").click(function() {
-    $("#resultsDiv").hide();
-    $("#intro").slideDown();
-  });
-
-  $("#goHome2").click(function() {
-    $("#searchByPlace").hide();
-    $("#intro").slideDown();
+  $("#homeButton").click(function() {
+    window.location.reload();
   });
 });

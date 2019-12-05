@@ -134,7 +134,7 @@ button#searchNearby:hover, button#searchDestination:hover, button#find-trails:ho
 
 /* This centers all buttons again */
 
-#intro, #searchBar {
+#intro, #searchBar, #searchByPlace {
   text-align: center;
 }
 
@@ -202,6 +202,36 @@ img {
 h4#trail-name {
   margin-top: 0;
   margin-bottom: 25px;
+}
+
+
+
+/* Home Button */
+
+.btn {
+  color: rgba(0, 30, 3, 0.68);
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  border: none;
+  padding: 22px 26px;
+  cursor: pointer;
+  transition: 0.4s;
+  outline: none;
+  border: 0;
+}
+
+.btn:hover {
+  color: #a18600;
+  border: 0;
+  outline: none;
+  transform: scale(1.5);
+}
+
+.fa-home {
+  font-size: 50px;
+  outline: none;
+  border: 0;
 }
 
 
