@@ -129,6 +129,9 @@ button#searchNearby:hover, button#searchDestination:hover, button#find-trails:ho
   color: #544541;
 }
 
+
+/* ---------------------- Modified ------------------*/
+
 #resultsDiv p {
   letter-spacing: 2px;
   line-height: 15px;
@@ -170,16 +173,12 @@ img {
   margin-right: 75px;
   margin-top: 20px;
   margin-bottom: 20px;
-
 }
 
 h4 {
   margin-top: 0;
   margin-bottom: 25px;
 }
-
-
-
 
 @media screen and (max-width: 2250px){
   #resultsDiv {
