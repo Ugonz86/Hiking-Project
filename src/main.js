@@ -24,6 +24,7 @@ $(document).ready(function() {
   });
 
   $("#find-trails").click(function () {
+    $(".footer").css("display", "none");
     $("#resultsDiv").slideDown("ease");
     $("#hikesNearby").hide();
     let maxHikeDistance = $("input#trail-distance").val();

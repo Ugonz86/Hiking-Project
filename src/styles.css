@@ -11,7 +11,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-h1 {
+h1#title {
   letter-spacing: 6px;
   color: rgba(0, 30, 3, 0.68);
   font-size: 600%;
@@ -175,7 +175,7 @@ a {
   padding-top: 30px;
   padding-left: 30px;
   padding-right: 30px;
-  height: 760px;
+  min-height: 600px;
   overflow-y: scroll;
 }
 
