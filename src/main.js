@@ -18,6 +18,7 @@ $(document).ready(function() {
     $("#hikesNearby").slideDown();
     $("#intro").hide();
   });
+
   $("#searchDestination").click(function() {
     $("#searchByPlace").slideDown();
     $("#intro").hide();
@@ -57,13 +58,14 @@ $(document).ready(function() {
               },
               function(error) {
                 $("#display-results").append(`I am the error message: ${error.message}`);
+                $("#display-results").show();
               });
           }
         }
       },
       function(error) {
         $("#display-results").empty().append(`<h5>There was an error processing your request: ${error.message}</h5>`);
-        $("#display-div").show();
+        $("#display-results").show();
       });
   });
   $("#homeButton").click(function() {
