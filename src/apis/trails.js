@@ -5,7 +5,7 @@ export function findTrails(){
     let request = new XMLHttpRequest();
 
     const endPoint = "https://www.hikingproject.com/data/get-trails?";
-    let url = `${endPoint}lat=47.6062&lon=-122.3321&maxDistance=10&key=${API_KEY}&maxResults=10`;
+    let url = `${endPoint}lat=47.6062&lon=-122.3321&maxDistance=25&key=${API_KEY}&maxResults=15`;
 
     request.onload = function() {
       if (this.status === 200) {
@@ -19,3 +19,15 @@ export function findTrails(){
     request.send();
   });
 }
+
+
+/*
+
+Change the url string to use geolocation. Add lat, lon as arguments in findTrails(). Have geo location save lat and lon seperate from the origins, in order to use them separately with findTrails. That way this API can utilize geolocation as well as the maps API that currently uses it. Enter lat and lon variables in main.js when calling the function finTrails.
+
+lat=${lat}&lon=${lon}
+
+Seattle/Coordinates
+lat=47.6062&lon=-122.3321
+
+*/

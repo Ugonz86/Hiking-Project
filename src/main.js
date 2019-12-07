@@ -32,6 +32,7 @@ $(document).ready(function() {
     let hikingDate = $('input#dateInput').val();
     $("input#dateInput").val("");
 
+
     findTrails()
       .then((response) => {
 
@@ -52,7 +53,7 @@ $(document).ready(function() {
                 let temperature = weatherBody.daily.data[0].temperatureHigh;
                 temperature = parseInt(temperature);
 
-                $("#display-results").append(`<img src="${trails[i].imgSmallMed}"><br><h4 id="trail-name">${trails[i].name}</h4><p>Location:  ${trails[i].location}</p><p>Length:  ${trails[i].length} mile hike</p><p>Summary:  ${weatherSummary}<p>Temperature:  ${temperature} degree high</p><p>Difficulty: ${trails[i].difficulty}</p><a href="https://www.google.com/maps/dir/${origins}/${trailCoordinates}">Get Directions</a><br><br><br><hr>`);
+                $("#display-results").append(`<img src="${trails[i].imgSmallMed}"><br><h4 id="trail-name">${trails[i].name}</h4><p>Location:  ${trails[i].location}</p><p>Length:  ${trails[i].length} mile hike</p><p>Summary:  ${weatherSummary}<p>Temperature:  ${temperature} degree high</p><p>Difficulty: ${trails[i].difficulty}</p><a class="directions" href="https://www.google.com/maps/dir/${origins}/${trailCoordinates}">Get Directions</a><br><br><br><hr>`);
               },
               function(error) {
                 $("#display-results").append(`I am the error message: ${error.message}`);
