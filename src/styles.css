@@ -11,6 +11,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+#hikesNearby, #searchByPlace {
+  display: none;
+}
+
 h1#title {
   letter-spacing: 6px;
   color: rgba(0, 30, 3, 0.68);
@@ -24,8 +28,70 @@ h3 {
   text-align: center;
 }
 
+h4#trail-name {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
 hr {
   border-color: rgba(0, 30, 3, 0.68);
+}
+
+#container {
+  margin-top: 150px;
+}
+
+#resultsDiv {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+  color: white;
+  background-color: rgba(0, 30, 3, 0.68);
+  border-radius: 5px;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 600px;
+  overflow-y: scroll;
+}
+
+#resultsDiv::-webkit-scrollbar {
+  width: 1em;
+  border-radius: 5px;
+}
+
+#resultsDiv::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 30, 3, 0.68);
+  border-radius: 5px;
+}
+
+#resultsDiv::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 30, 3, 0.38);
+  outline: 1px solid rgba(0, 30, 3, 0.68);
+  border-radius: 5px;
+}
+
+#resultsDiv p {
+  letter-spacing: 2px;
+  line-height: 15px;
+  font-family: sans-serif;
+}
+
+#display-results {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+a {
+  background-color: rgba(0, 30, 3, 0.68);
+  color: #a18600;
+  float: right;
+  padding: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  text-decoration: none;
+  margin-bottom: 25px;
 }
 
 a:hover {
@@ -44,34 +110,36 @@ input {
   font-weight: lighter;
   color: #544541;
 }
+
 input[type="date"] {
   width: 250px;
 }
+
 input[type="date"]::-webkit-inner-spin-button {
     display: none;
 }
 
+#dateInput {
+  color: #544541;
+}
+
+#intro, #searchBar, #searchByPlace {
+  text-align: center;
+}
+
+img {
+  border-radius: 5px;
+  float: left;
+  width: 275px;
+  height: 275px;
+  transition: 0.4s;
+  margin-right: 75px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
 img:hover {
   transform: scale(1.2);
-}
-
-button#searchNearby, button#searchDestination, button#find-trails, button#goHome, button#goHome2, button#directionsButton, button#map {
-  height: 50px;
-  width: 250px;
-  background-color: rgba(0, 30, 3, 0.68);
-  color: white;
-  border: 0;
-  border-radius: 5px;
-  outline: none;
-  font-weight: lighter;
-  transition: 0.4s;
-}
-
-button#searchNearby:hover, button#searchDestination:hover, button#find-trails:hover, button#goHome:hover, button#goHome2:hover, button#directionsButton:hover, button#map:hover  {
-  background-color: #a18600;
-  border: 0;
-  outline: none;
-  transform: scale(.8);
 }
 
 .footer {
@@ -93,116 +161,26 @@ button#searchNearby:hover, button#searchDestination:hover, button#find-trails:ho
   color: white;
 }
 
-#hikesNearby, #searchByPlace {
-  display: none;
-}
-
-
-#resultsDiv::-webkit-scrollbar {
-  width: 1em;
-  border-radius: 5px;
-}
-
-#resultsDiv::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 30, 3, 0.68);
-  border-radius: 5px;
-}
-
-#resultsDiv::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 30, 3, 0.38);
-  outline: 1px solid rgba(0, 30, 3, 0.68);
-  border-radius: 5px;
-}
-
-#display-results {
-  padding-left: 100px;
-  padding-right: 100px;
-}
-
-#container {
-  margin-top: 150px;
-}
-
-#dateInput {
-  color: #544541;
-}
-
-
-
-/* ---------------------- Modified ------------------*/
-
-
-/* This centers all buttons again */
-
-#intro, #searchBar, #searchByPlace {
-  text-align: center;
-}
-
-
-/* Changes fonts and spacing in results in that are displayed */
-
-#resultsDiv p {
-  letter-spacing: 2px;
-  line-height: 15px;
-  font-family: sans-serif;
-}
-
-
-/* Moves get directions link to the right, updates colors, appears button */
-
-a {
+button#searchNearby, button#searchDestination, button#find-trails, button#goHome, button#goHome2, button#directionsButton, button#map {
+  height: 50px;
+  width: 250px;
   background-color: rgba(0, 30, 3, 0.68);
-  color: #a18600;
-  float: right;
-  padding: 4px;
-  padding-left: 6px;
-  padding-right: 6px;
-  text-decoration: none;
-  margin-bottom: 25px;
-}
-
-
-/* updates length of results div to 800px */
-
-#resultsDiv {
-  display: none;
-  margin-left: auto;
-  margin-right: auto;
-  width: 45%;
   color: white;
-  background-color: rgba(0, 30, 3, 0.68);
+  border: 0;
   border-radius: 5px;
-  padding-top: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-  min-height: 600px;
-  overflow-y: scroll;
-}
-
-
-/* Fixes images to align properly */
-
-img {
-  border-radius: 5px;
-  float: left;
-  width: 275px;
-  height: 275px;
+  outline: none;
+  font-weight: lighter;
   transition: 0.4s;
-  margin-right: 75px;
-  margin-top: 15px;
-  margin-bottom: 20px;
 }
 
-
-/* Trail Name Header */
-
-h4#trail-name {
-  margin-top: 0;
-  margin-bottom: 25px;
+button#searchNearby:hover, button#searchDestination:hover, button#find-trails:hover, button#goHome:hover, button#goHome2:hover, button#directionsButton:hover, button#map:hover  {
+  background-color: #a18600;
+  border: 0;
+  outline: none;
+  transform: scale(.8);
 }
 
-
-/* Home Button */
+/* Home Icon Button */
 
 .btn {
   color: rgba(0, 30, 3, 0.68);
@@ -230,9 +208,7 @@ h4#trail-name {
   border: 0;
 }
 
-
-/* ------- Responsive Design below --------- */
-
+/* ------------------ Responsive Design below -------------------- */
 
 @media screen and (max-width: 2250px){
   #resultsDiv {
