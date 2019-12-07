@@ -238,6 +238,12 @@ button#searchNearby:hover, button#searchDestination:hover, button#find-trails:ho
   #resultsDiv {
     width: 71%;
   }
+  img {
+    float: none;
+    margin: 50px 0 50px 0;
+    width: 100%;
+    min-height: 450px;
+}
 }
 
 @media screen and (max-width: 1100px){
@@ -245,7 +251,9 @@ button#searchNearby:hover, button#searchDestination:hover, button#find-trails:ho
     width: 73%;
   }
   img {
-    clear: both;
+   margin: 50px 0 50px 0;
+   width: 100%;
+   min-height: 375px;
   }
 }
 
@@ -253,10 +261,33 @@ button#searchNearby:hover, button#searchDestination:hover, button#find-trails:ho
   #resultsDiv {
     width: 75%;
   }
+  #display-results {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 900px){
   #resultsDiv {
     width: 77%;
+  }
+}
+
+@media screen and (max-width: 800px){
+  #resultsDiv {
+    width: 79%;
+  }
+}
+
+@media screen and (max-width: 700px){
+  #resultsDiv {
+    width: 81%;
+  }
+  #display-results {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  img {
+   min-height: 250px;
   }
 }
